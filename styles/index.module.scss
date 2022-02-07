@@ -1,0 +1,110 @@
+@import './colors.module.scss';
+@import './breakpoints.module.scss';
+
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('/fonts/Proxima-Nova.otf');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('/fonts/Proxima-Nova-Bold.otf');
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+}
+
+// containers
+@mixin container {
+    max-width: 1640px;
+    padding: 0 140px;
+    margin: 0 auto;
+
+    @media (max-width: $mobile) {
+        max-width: 100%;
+        padding: 0 36px;
+    }
+}
+
+//transitions
+@mixin basic-transition {
+    transition: all 0.3s linear;
+}
+
+//typography
+@mixin extra-small-text {
+    font-family: 'Proxima-Nova';
+    font-size: 12px;
+    font-weight: 400;
+    color: $grey;
+}
+
+@mixin little-text {
+    font-family: 'Proxima-Nova';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@mixin regular-text {
+    font-family: 'Proxima-Nova';
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+@mixin career-text {
+    font-family: 'Proxima-Nova';
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+@mixin medium-text {
+    font-family: 'Proxima-Nova';
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 400;
+}
+
+@mixin mobile-content {
+    font-family: 'Proxima-Nova';
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+@mixin content-text {
+    font-family: 'Proxima-Nova';
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 400;
+}
+
+@mixin mobile-bold-text {
+    font-family: 'Proxima-Nova';
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+@mixin bold-text {
+    font-family: 'Proxima-Nova';
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+@mixin mobile-extra-big {
+    font-family: 'Proxima-Nova';
+    font-size: 60px;
+    line-height: 65px;
+}
+
+@mixin extra-big-text {
+    font-family: 'Proxima-Nova';
+    font-size: 110px;
+    line-height: 135px;
+}

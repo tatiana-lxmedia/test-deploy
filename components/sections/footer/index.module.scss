@@ -1,0 +1,80 @@
+@import '../../../styles/index.module.scss';
+
+.footer {
+    @include container;
+    padding-top: 140px;
+    padding-bottom: 35px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        height: 260px;
+        position: relative;
+
+        @media (max-width: $mobile) {
+            height: unset;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        @include medium-text;
+
+        max-width: 277px;
+    }
+
+    &__title {
+        margin-bottom: 14px;
+
+        @media (max-width: $mobile) {
+            margin-top: 45px;
+        }
+    }
+
+    &__description {
+        color: $grey;
+        line-height: 25px;
+    }
+
+    &__rotate {
+        position: absolute;
+        top: 50px;
+        right: -40px;
+        transform: rotate(90deg);
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $mobile) {
+            padding-bottom: 16px;
+            align-items: flex-end;
+        }
+    }
+
+    &__copyright {
+        @include extra-small-text;
+
+        @media (max-width: $mobile) {
+            max-width: 122px;
+        }
+    }
+
+    &__link {
+        @include extra-small-text;
+        @include basic-transition;
+
+        &:hover {
+            color: $orange;
+        }
+        & + & {
+            margin-left: 15px;
+        }
+    }
+}
